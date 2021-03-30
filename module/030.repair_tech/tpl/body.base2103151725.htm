@@ -1,0 +1,110 @@
+{% spaceless %}
+    <div class="container">
+
+        {% if file_exists( constant("dir_site_module_nowlev_tpl_local")~"body.page.htm" ) %}  
+            <div class="row">
+                <div class="col">
+                    {% include constant("dir_site_module_nowlev_tpl_local")~"body.page.htm" %}  
+                </div>
+            </div>
+        {% endif %}
+
+        {# форма заказа #}
+        {% set ff = constant("dir_site_tpl")~"dops/body.form.htm" %}  
+        {% if file_exists( ff ) %}  
+            {% include ff %}  
+        {% endif %}
+
+
+        {% if 1 == 2 %}
+            <div style="background-image: url('{{ sd }}img/line1_blue.svg'); background-size: cover; height: 100px;">&nbsp;</div>
+        {% endif %}
+
+        {% if 1 == 2 %}
+            <div style="background-color: #99ccff;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col d-none d-md-block text-center">&nbsp;</div>
+
+                        <div class="col">
+                            <h3>Заявка</h3>
+
+                            <div>
+                                {% if 1 == 2 %}
+                                    <div class="form-group">
+                                        Как вас зовут {#<small>We&#39;ll never share your email with anyone else.</small>#}
+                                    </div>
+                                {% endif %}
+
+                                <div class="form-group">
+                                    Телефон {#<small>We&#39;ll never share your email with anyone else.</small>#}
+                                </div>
+                                Как с Вами лучше связаться
+
+                                <div class="form11">&nbsp;<img src="/vendor/didrive/base/img/icon/phone.png" style="width:20px" />&nbsp;Телефон &nbsp;<img src="/vendor/didrive/base/img/icon/viber.png" style="width:20px" />&nbsp;Viber &nbsp;<img src="/vendor/didrive/base/img/icon/wa.png" style="width:20px" />&nbsp;WathsApp &nbsp;<img src="/vendor/didrive/base/img/icon/tele.png" style="width:20px" />&nbsp;Telegram</div>
+                                &nbsp;
+
+                                <p>Отправить</p>
+
+                                {#<p>Позвоним в ближайшее рабочее время ( с 9:00 до 18:00 )</p>#}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if 1 == 2 %}
+
+
+            {#    <div style="background-image: url('{{ sd }}img/line1_blue_bottom.svg'); background-size: cover; height: 100px;">&nbsp;</div>
+            #}
+            <div class="container">
+                <div class="row">
+                    <div class="col">&nbsp;
+                        <h4>&nbsp;<br />
+                            &nbsp;</h4>
+                    </div>
+                </div>
+                {% if 1 == 2 %}
+
+                    <div class="row">
+                        <div class="col">
+                            <div style="background-color: #efef55;">111111</div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="d-flex align-items-center"><img alt="" src="/vendor/didrive_site/kl1220ksk/download/uploaded/desktop_computer_500x500_jpg.jpg" style="height:100px; xwidth:500px" /></div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="d-flex">2222222</div>
+                                </div>
+                            </div>
+
+                            <div style="background-color: #efef55;">111111</div>
+
+                            <p><img alt="" src="/vendor/didrive_site/kl1220ksk/download/uploaded/desktop_computer_500x500_jpg.jpg" style="height:100px; xwidth:500px" /> <img alt="" src="/vendor/didrive_site/kl1220ksk/download/uploaded/6f81841e2efdfdc5e545415c3a0bf80a_jpg.jpg" style="height:100px; xwidth:1024px" /> текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст</p>
+
+                            <p>текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст</p>
+
+                            <p>текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст</p>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+
+        {% endif %}
+
+        {% if file_exists(constant("dir_site_module_nowlev_tpl_local")~"body.page2.htm") %}
+            <div class="row">
+                <div class="col">
+
+                    {% include constant("dir_site_module_nowlev_tpl_local")~"body.page2.htm" %}  
+
+                </div>
+            </div>
+        {% endif %}
+
+    </div>
+{% endspaceless %}

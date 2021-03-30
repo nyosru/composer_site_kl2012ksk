@@ -1,7 +1,7 @@
 {
     "name": "didrive_site/kl1220ksk",
     "description": "КСК",
-    "version": "1.0.0",
+    "version": "1.3.0",
     
     "keywords": [
         "didrive", "site", "nyos", "uralweb.info"
@@ -20,6 +20,16 @@
     "require": {
 
         "php": ">=7.1.0"
-
+        , "didrive/base" : ">=2.15.0"
+        , "didrive/aut" : ">=0.1.0"
+        , "didrive_mod/shop" : ">=1.1.0"
+        
+        , "twbs/bootstrap" : ">=4.3.1"
+        , "components/jquery" : ">=3.3.1"
+        
+        , "didrive_mod/backword" : ">=0.0.5"
+        
     }
+
+    
 }

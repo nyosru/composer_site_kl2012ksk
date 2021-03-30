@@ -1,0 +1,159 @@
+{% spaceless %}
+
+    {#<div class="bg-white border-bottom shadow-sm" style="padding:0;margin:0;">#}
+
+    <div class="line1" >
+        <div class="container" >
+            <div class="row" >
+                <div class="col-12 col-sm-6 text-left" >
+                    <a href="tel:+73452218214" style="font-weight: normal;" ><img src="{{ sd }}tel.svg" height="20" style="padding-bottom: 5px;" />&nbsp;+7(3452)218-214</a>
+                    <a href="tel:+79044977399" style="font-weight: normal; display: inline-block; margin-left: 20px;"><img src="{{ sd }}tel.svg" height="20" style="padding-bottom: 5px;" />&nbsp;+7(3452)977-399</a>
+
+                </div>
+                <div class="col-12 col-sm-6 text-right" >
+
+                    <a href="" data-toggle="modal" data-target="#exampleModalCenter" title="показать на большой карте"
+                       onclick="$('#map47').html('<iframe src=\'https://yandex.ru/map-widget/v1/?um=constructor%3APcJEJrOMfI3ndluj22KQ8jV6o-gAqnPB&amp;source=constructor\' width=\'100%\' height=\'450\' frameborder=0 ></iframe>');"
+                       style="font-weight: normal;"
+                       >{#<i class="fa fa-map-marker xfa-stack-1x"></i>#} г.Тюмень, <nobr>ул.Северная д.3/4</nobr></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container line_up2"  >
+        <div class="row {#align-items-end#} " style="margin-bottom: 2vh;" >
+
+            <div class="col-12 col-sm-4
+                 text-left
+                 d-flex
+                 {#align-items-center#}
+                 align-items-end
+                 " >
+                <a href="/" style="width:100%; padding-bottom: 1.5vh;">
+                    {#<img src="{{ sd }}logo.png" alt="" style="width:70%; max-width: 300px;" xheight="50" />#}
+                    <img src="{{ sd }}logo.svg" alt="" style="width:100%; max-width: 300px; min-width: 100px;" />
+                </a>
+            </div>
+
+            <div class="col-8 col-sm-6 col-md-7 text-center 
+                 {#xalign-self-end#}
+                 d-flex 
+                 {#align-items-center#}
+                 align-items-end
+                 " 
+                 {#style="padding-top: 1.5em;"#}
+                 >
+                {#<input type="text" value="" class="form-control" placeholder="Поиск" />#}
+
+                <form action="/index.php" method="get" style="width:100%;" >
+                    <label style="width:100%;">
+                        <div class="input-group {#xmb-3#}" style="width:100%;">
+
+                            {#<div class="input-group-prepend">
+                                <span class="input-group-text"><span class="fa fa-search"></span></span>
+                            </div>#}
+
+                            <input type="text" 
+                                   name="search" class="form-control" 
+                                   placeholder="Поиск" 
+                                   {% if get.search is defined and get.search|length > 0 %} value="{{ get.search|e }}" {% endif %}
+                                   aria-label="поиск" aria-describedby="basic-addon2" />
+                            <input type="hidden" name="level" value="010.catalog" />
+
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="submit"><span class="fa fa-search"></span></button>
+                            </div>
+
+                        </div>
+                    </label>
+                </form>
+
+            </div>
+            <div class="col-4 col-sm-2 col-md-1 text-center
+                 d-flex 
+                 align-items-end
+                 " >
+
+                <a href="/010.catalog/cart/" class="btn {# xbtn-primary #} position-relative" id="cart" >
+                    {#<span class="fa fa-shopping-cart" style="color: gray;  font-size:30px;"></span>#}
+                    <img src="{{ sd }}basket.svg" style="width:40px;" alt="" border="0" />
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger number-shopping-cart">
+                        {#<span class="visually-hidden">непрочитанные сообщения</span>#}
+                    </span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    {% if t_menu1 is defined and t_menu1 is not empty %}
+        {% include t_menu1 %}
+    {% endif %}
+
+    {% if 1 == 2 %}
+        <div class="container" >
+            <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 ">
+                {#<h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>#}
+                <img class="my-0 mr-md-auto" src="{{ sd }}logo.png" alt="" xwidth="100" height="75" />
+                {#<img class="my-0 mr-md-auto" src="https://imgholder.ru/100x50/8493a8/adb9ca.jpg&text=logo&font=kelson" alt="" width="100" height="50" />#}
+                <nav class="my-2 my-md-0 mr-md-3 justify-content-center">
+
+                    {% if t_menu1 is defined and t_menu1|length > 4 %}
+                        {% include t_menu1 %}
+                    {% endif %}
+
+                    {#
+                    <a class="p-2 text-dark" href="#">Features</a>
+                    <a class="p-2 text-dark" href="#">Enterprise</a>
+                    <a class="p-2 text-dark" href="#">Support</a>
+                    <a class="p-2 text-dark" href="#">Pricing</a>
+                    #}
+
+                </nav>
+                {#<a class="btn btn-outline-primary" href="#">Sign up</a>#}
+
+                {% if inf_enter_form is defined and inf_enter_form|length > 4 %}
+                    {% include inf_enter_form %}
+                {% endif %}
+
+            </div>
+        </div>
+    {% endif %}
+
+    {#</div>#}
+
+
+    <!-- Button trigger modal -->
+    {#<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+      Запустить модальное окно
+    </button>#}
+
+    <!-- Modal -->
+    <div class="modal fade " id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Компьютерная сервисная компания Партнер
+                        <br/>
+                        <small>Тюмень, ул. Северная д.3/4 тел: <a href="tel:+73452977399" title="позвонить">(3452) 977-399</a></small>
+                    </h5>
+
+                    {#<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>#}
+                </div>
+                <div class="modal-body" id="map47" >
+                    {#<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3APcJEJrOMfI3ndluj22KQ8jV6o-gAqnPB&amp;source=constructor" width="100%" height="450" frameborder="0"></iframe>#}
+                    {#<div id="map"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3APcJEJrOMfI3ndluj22KQ8jV6o-gAqnPB&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script></div>#}
+                </div>
+                {#<div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>#}
+            </div>
+        </div>
+    </div>        
+
+{% endspaceless %}

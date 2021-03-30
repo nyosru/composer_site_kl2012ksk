@@ -1,0 +1,149 @@
+{% spaceless %}
+
+    {#<div style="background-image: url('{{ sd }}img/line1_blue.svg'); background-size: cover; height: 100px;"> &nbsp;</div>#}
+
+    {#<div style="background-color: #99ccff;" id="form_add" >#}
+    <div class="container form1-container border-radius" id="form_add" >
+        <div class="row border-radius">
+
+            <div class="col-6 text-center d-none d-md-block col-md-4 col-lg-6" style="padding: 15px;" >
+                <img alt="" src="/vendor/didrive_site/kl1220ksk/download/uploaded/master_job_png.png" 
+                    style="xheight:30vh; width:90%;max-width: 400px; margin-top: 3vh;" 
+                    />
+            </div>
+
+            <div class="col-12 col-md-8 col-lg-4 offset-lg-1" {#style="padding: 5vh 10vh;"#} >
+
+                <form name="newsletter" role="form" 
+                      action="#" method="post"
+                      class="ajax form-contact-us" 
+                      res_ok="form11res200" 
+                      res_error="form11res2100"
+                      >
+                    <center>
+                    <h2>Отправте заявку</h2>
+</center>
+                    <div class="form-group">
+                        {#<label for="s1">Как вас зовут</label>#}
+                        <input type="text" class="form-control" id="s1" name="bw[fio]" placeholder="Как вас зовут *" required="" onchange="$('#ff1').show('slow');" />
+                        {#<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>#}
+                    </div>
+
+                    <div class="form-group">
+                        {#<label for="s2">Телефон</label>#}
+                        <input type="text" class="form-control" id="s2" name="bw[tel]" placeholder="Телефон *" required="" />
+                        {#<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>#}
+                    </div>
+                    
+                    <span style="display:none;" id="ff1" >
+                        
+                    <div class="form-group">
+                        {#<label for="s2">Что нужно сделать ?</label>#}
+                        <textarea class="form-control" id="s3" name="bw[text]" placeholder="Что нужно сделать ?" ></textarea>
+                        {#<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>#}
+                    </div>
+
+                    <div class="form-group">
+                        
+                        <label><input type=checkbox name="ss" required="" /> Даю согласие на обработку <a href="/privacy/" target="_blank" >персональных данных</a></label>
+                        {#<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>#}
+                    </div>
+
+                    </span>
+                    
+                    <center>
+
+                        <br/>
+
+                        <button type="submit" 
+                                {#xclass="ot-btn btn-main-color text-cap xsend_order btn-dark-color"#}
+                                {#xclass="ot-btn btn-dark-color xbtn-long text-cap wow fadeInUp2"#}
+                                {#xstyle="display:inline-block; margin:0;"#}
+                                class="btn btn-info2"
+                                >Отправить</button>
+                                
+                    </center>
+
+                    <input type="hidden" 
+                           {#class="newsletter-email input-text form-control text-center wow fadeInUp2" #}
+                           {#xstyle="display:inline-block; width: 40%; max-width: 250px; xmargin-top:50px;"#}
+                           name="bw[uri]" value="{{  'http://'~server.HTTP_HOST~server.REQUEST_URI }}" />
+
+                    <br/>
+                    <br/>
+                    
+                    <input type="hidden" name="run_modul" value="back" />
+                    <input type="hidden" name="id" value="1" />
+                    <input type="hidden" name="secret" value='{{ creatSecret(1) }}' />
+                    <input type="hidden" name="action" value='send_ajax' />
+
+                </form>
+
+                <span id="form11res200" style="display:none; width:100%; padding:10px;" >
+                    <div id="formorder" style="width:100%;"><center>
+                            <h2><b>Данные отправлены!</b><br/>Позвоним в&nbsp;ближайшее время уточнить детали</h2>
+                        </center>
+                    </div>
+                </span>
+
+                <span id="form11res2100" class="alert-warning" style="display:none; padding:10px;" >
+                    <div class="for_text" ></div>
+                </span>                                
+
+                {% if 1 == 2 %}
+                    <h3>Отправте заявку</h3>
+                    <div>
+
+                        <form class="form1" >
+                            <div class="form-group">
+                                <label for="s1">Как вас зовут</label>
+                                <input type="text" class="form-control" id="s1" />
+                                {#<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>#}
+                            </div>
+
+                            <div class="form-group">
+                                <label for="s2">Телефон</label>
+                                <input type="text" class="form-control" id="s2" />
+                                {#<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>#}
+                            </div>
+
+
+                            {#
+                            <style>
+                                .form1options3 label{ margin-right: 15px; display: inline-block; }
+                            </style>
+    
+                            Как с Вами лучше связаться
+                            <br/>
+                            #}
+                            <center>
+
+                                {#                            <div class='form11' >
+                                                                <label><input type="checkbox" class="xform-check-input" >&nbsp;<img src='/vendor/didrive/base/img/icon/phone.png' style='width:20px;'>&nbsp;Телефон</label>
+                                                                <label><input type="checkbox" class="xform-check-input" >&nbsp;<img src='/vendor/didrive/base/img/icon/viber.png' style='width:20px;'>&nbsp;Viber</label>
+                                                                <label><input type="checkbox" class="xform-check-input" >&nbsp;<img src='/vendor/didrive/base/img/icon/wa.png' style='width:20px;'>&nbsp;WathsApp</label>
+                                                                <label><input type="checkbox" class="xform-check-input" >&nbsp;<img src='/vendor/didrive/base/img/icon/tele.png' style='width:20px;'>&nbsp;Telegram</label>
+                                                            </div>
+                                #}
+
+                                <br/>
+
+                                <button type="submit" class="btn btn-info2 xbtn-primary">Отправить</button>
+
+                            </center>
+
+                        </form>
+
+                        {#<p>Позвоним в ближайшее время</p>#}
+
+                    </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+    {#</div>#}
+
+    {#<div style="background-image: url('{{ sd }}img/line1_blue_bottom.svg'); background-size: cover; height: 100px;"> &nbsp;</div>#}
+
+{% endspaceless %}

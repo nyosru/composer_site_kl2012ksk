@@ -1,0 +1,159 @@
+{% spaceless %}
+
+    {#    <div style="background-image: url('{{ sd }}img/line2_footer.svg'); background-size: cover; height: 50px;"> &nbsp;</div>
+    #}
+    <footer >
+        <div>
+            <div class="container" >
+                <div class="row">
+
+                    <div class="col d-none d-md-block text-center">
+
+                        <div style="width:1%; min-width: 250px;" >
+
+                            <a href="/" title="Компьютерная сервисная компания Партнёр">
+                                {#<img src="{{ sd }}logo.jpg" style="width:70%; min-width: 150px;" />#}
+                                <img src="{{ sd }}logo-w.svg" style="width:70%; min-width: 250px;" />
+                            </a>
+                            <br/>
+                            <br/>
+                            Компания оказывает услуги по&nbsp;обслуживанию и&nbsp;ремонту компьютеров и&nbsp;оргтехники, заправке картриджей и&nbsp;продаже расходных материалов.
+                            {#ООО <nobr>"КСК-Партнер"</nobr>
+                            <br/>
+                            © {{ "now"|date('Y') }} Все права защищены#}
+
+                        </div>
+
+                    </div>
+
+                    <div class="col text-left" style="padding-top: 2vh;" >
+                        {% if t_menu3 is defined and t_menu3|length > 4 %}
+                            {% include t_menu3 %}
+                        {% endif %}
+                    </div>
+
+                    <div class="col text-left" style="padding-top: 4vh;" >
+
+                        <a class="text-light" href="tel:+73452218214" ><img src="{{ sd }}tel.svg" height="20" style="padding-bottom: 5px;" />&nbsp;+7(3452)&nbsp;218-214</a>
+                        <br/>
+                        <a class="text-light" href="tel:+73452977399" ><img src="{{ sd }}tel.svg" height="20" style="padding-bottom: 5px;" />&nbsp;+7(3452)&nbsp;977-399</a>
+                        <br/>
+                        <a class="text-light" href="tel:+79044977399" ><img src="{{ sd }}tel.svg" height="20" style="padding-bottom: 5px;" />&nbsp;8-904-497-73-99</a>
+                        <br/>
+                        <a class="text-light" href="" data-toggle="modal" data-target="#exampleModalCenter" title="показать на большой карте" 
+                           onclick="$('#map47').html('<iframe src=\'https://yandex.ru/map-widget/v1/?um=constructor%3APcJEJrOMfI3ndluj22KQ8jV6o-gAqnPB&amp;source=constructor\' width=\'100%\' height=\'450\' frameborder=0 ></iframe>');"
+                           >г.Тюмень, <nobr>ул.Северная д.3/4</nobr></a>
+                        <br/>
+                        <a class="text-light" href="mailto:scpartner@mail.ru" >scpartner@mail.ru</a>
+                        <br/>
+
+                        <span class="icon_msg_mini" >
+                            <a target="_blank" 
+                               {#class="btn btn-sm btn-light border"#}
+                               href="tg://resolve?domain=SC_Partner" 
+                               ><img src="/vendor/didrive/base/img/icon/tele.png" /></a>
+
+                            <a target="_blank" 
+                               {#class="btn btn-sm btn-light border"#}
+                               href="viber://chat?number=79044977399" 
+                               ><img src="/vendor/didrive/base/img/icon/viber.png" /></a>
+
+                            <a target="_blank" 
+                               {#class="btn btn-sm btn-light border"#}
+                               href="https://api.whatsapp.com/send?phone=79044977399" 
+                               ><img src="/vendor/didrive/base/img/icon/whatsapp.png" /></a>
+                        </span>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class='f-bottom' >
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-12 col-sm-4 text-left text-xs-center text-sm-center" style="padding-bottom: 2vh;">
+                            <small>
+                                Все&nbsp;права&nbsp;защищены
+                                ООО&nbsp;"КСК-Партнер" 
+                                ©&nbsp;{{ "now"|date('Y') }}
+                            </small>
+                        </div>
+                        <div class="col-12 col-sm-8 text-center" style="padding-bottom: 2vh;">
+                            <small>
+                                Вся информация на&nbsp;сайте носит справочный характер и&nbsp;не&nbsp;является публичной офертой, определяемой статьей 437&nbsp;ГК&nbsp;РФ
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            {#<div style="padding: 2vh; color: rgba(0,0,0,0.7); 
+                background: -webkit-linear-gradient(180deg, rgb(170, 182, 179), rgb(253, 253, 253));
+                 background: -moz-linear-gradient(180deg, rgb(170, 182, 179), rgb(253, 253, 253));
+                 background: linear-gradient(180deg, rgb(170, 182, 179), rgb(253, 253, 253));
+            " class="text-center" >
+    
+                            ООО "КСК-Партнер" © {{ "now"|date('Y') }} Все&nbsp;права&nbsp;защищены
+            </div>#}
+
+    </footer>
+
+{% endspaceless %}                
+
+{% if 1 == 2 %}
+
+    <div class="container">
+
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <div class="row">
+                <div class="col-12 col-md">
+                    {#<img class="mb-2" src="/docs/4.3.1/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">#}
+                    <img class="mb-2" src="https://imgholder.ru/100x50/8493a8/adb9ca.jpg&text=logo&font=kelson" alt="" width="100" height="50">
+                    <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
+                </div>
+            </div>
+            <div class="col-6 col-md">
+                {#<h5>Features</h5>#}
+                <ul class="list-unstyled text-small">
+                    {% if 1 == 2 %}
+                        <li><a class="text-muted" href="#">Cool stuff</a></li>
+                        <li><a class="text-muted" href="#">Random feature</a></li>
+                        <li><a class="text-muted" href="#">Team feature</a></li>
+                        <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                        <li><a class="text-muted" href="#">Another one</a></li>
+                        <li><a class="text-muted" href="#">Last time</a></li>
+                        {% endif %}
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                {% if 1 == 2 %}
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Resource</a></li>
+                        <li><a class="text-muted" href="#">Resource name</a></li>
+                        <li><a class="text-muted" href="#">Another resource</a></li>
+                        <li><a class="text-muted" href="#">Final resource</a></li>
+                    </ul>
+                {% endif %}
+            </div>
+            <div class="col-6 col-md">
+                {% if 1 == 2 %}
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Team</a></li>
+                        <li><a class="text-muted" href="#">Locations</a></li>
+                        <li><a class="text-muted" href="#">Privacy</a></li>
+                        <li><a class="text-muted" href="#">Terms</a></li>
+                    </ul>
+                {% endif %}
+            </div>
+    </div>
+</div>
+</footer>
+
+</div>
+
+{% endif %}

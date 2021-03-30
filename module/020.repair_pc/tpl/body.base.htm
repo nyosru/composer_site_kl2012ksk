@@ -1,0 +1,33 @@
+{% spaceless %}
+    <div class="container">
+
+        {# первый блок #}
+        {% set ff = constant("dir_site_module_nowlev_tpl_local")~"body.page.htm" %}  
+        {% if file_exists( ff ) %}  
+            <div class="row">
+                <div class="col">
+                    <br/>
+                    {% include ff %}  
+                </div>
+            </div>
+        {% endif %}
+
+        {# форма заказа #}
+        {% set ff = constant("dir_site_tpl")~"dops/body.form.htm" %}  
+        {% if file_exists( ff ) %}  
+            {% include ff %}  
+        {% endif %}
+
+        {# второй блок #}
+        {% set ff = constant("dir_site_module_nowlev_tpl_local")~"body.page2.htm" %}  
+        {% if file_exists(ff) %}
+            <div class="row">
+                <div class="col">
+                    <br/>
+                    {% include ff %}  
+                </div>
+            </div>
+        {% endif %}
+
+    </div>
+{% endspaceless %}
